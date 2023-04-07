@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Card from "../Components/Card";
 
 
@@ -9,9 +10,8 @@ const Favs = () => {
     const pablovalue= value[1];
     const pabloValueJson=JSON.parse(pablovalue);
     newArrayParseado.push(pabloValueJson);
-
-
   })
+
 
   return (
     <>

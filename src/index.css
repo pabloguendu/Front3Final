@@ -36,9 +36,6 @@ a{
   margin: 5px;
   cursor: pointer;
 }
-a:hover{
-  color: rgb(136, 136, 136);
-} 
 
 footer {
   display: flex;
@@ -47,7 +44,7 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
+  width: 100%;
   height: 40px;
   margin-top: 2rem;
 }
@@ -72,10 +69,11 @@ form{
 
 .card{
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
+  align-items: center;
   flex-direction: column;
   align-items: center;
-  width: 200px;
+  width: 302px;
   padding: 0.5rem 0.5rem 0 0.5rem;
   border: 0.5px solid rgb(136, 136, 136);
 }
@@ -84,14 +82,24 @@ form{
   border: 0.5px solid rgb(206, 217, 142);
 }
 
-.card-grid{
+.card-grid {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
   width: 90vw;
-  height: auto;
   flex-wrap: wrap;
-  margin: 0 auto;
+}
+.cardDetails{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  align-items: center;
+  height: 50px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+  width:30%;
 }
 
 table {
@@ -119,4 +127,15 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.link-text-decoration{
+  text-decoration: none;
+  color: black;
+}
+
+.container-details{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

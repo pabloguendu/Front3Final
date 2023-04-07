@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { ContextGlobal } from './utils/ApiContext';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
+  const {state,dispatch}=useContext(ContextGlobal);
+  const toggleDarkMode = () => {
+    dispatch({ type: 'TOGGLE' });
+  };
+
 
   return (
+    <div className={ state ?'':'dark'}>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <div>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
@@ -19,11 +26,15 @@ const Navbar = () => {
         <Link className="nav-link active" aria-current="page" to="/contact">Contacto</Link> 
         </li>
         <li>
-        <button type="button" class="btn btn-dark">Dark</button>
+        <button onClick={toggleDarkMode} type="button" class="btn btn-dark">
+          {state.darkMode ? 'Light Mode' : 'Dark Mode'}</button>
         </li>
       </ul>
     </div>
+    
+
   </nav>
+  </div>
 
 
 

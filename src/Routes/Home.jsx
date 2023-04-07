@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom';
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  
+  const {state}=useContext(ContextGlobal);
   const {dentists}=useContext(ContextGlobal);
-  console.log(dentists)
   function getDentistsId (id){
     localStorage.setItem(id,JSON.stringify(dentists[id-1]));  
   }
@@ -16,7 +15,7 @@ const Home = () => {
 
   return (
     <>
-    <div className="" >
+    <div className={ state.darkMode ?'':'dark'} >
       <h1>Home</h1>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}

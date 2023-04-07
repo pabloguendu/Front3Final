@@ -12,8 +12,7 @@ const Navbar = () => {
 
 
   return (
-    <div className={ state ?'':'dark'}>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className={state.darkMode?'navbar navbar-expand-lg navbar-light bg-light':'navbar navbar-expand-lg navbar-dark bg-dark'}>
     <div>
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
@@ -26,15 +25,13 @@ const Navbar = () => {
         <Link className="nav-link active" aria-current="page" to="/contact">Contacto</Link> 
         </li>
         <li>
-        <button onClick={toggleDarkMode} type="button" class="btn btn-dark">
+        <button onClick={toggleDarkMode} type="button" class={state.darkMode ?'btn btn-light':'btn btn-dark'}>
           {state.darkMode ? 'Light Mode' : 'Dark Mode'}</button>
         </li>
       </ul>
     </div>
-    
+    </nav>
 
-  </nav>
-  </div>
 
 
 

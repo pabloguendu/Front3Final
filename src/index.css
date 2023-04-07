@@ -137,6 +137,9 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+.dark > p {
+  color: white;
+}
 
 .link-text-decoration{
   text-decoration: none;
@@ -147,4 +150,10 @@ tr:nth-child(even) {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card-title{
+  color:black;
+}
+.card-text{
+  color: black;
 }

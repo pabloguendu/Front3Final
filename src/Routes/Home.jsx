@@ -9,6 +9,7 @@ const Home = () => {
   const {state}=useContext(ContextGlobal);
   const {dentists}=useContext(ContextGlobal);
   function getDentistsId (id){
+    console.alert("Acá")
     localStorage.setItem(id,JSON.stringify(dentists[id-1]));  
   }
 

@@ -6,7 +6,8 @@ import { ContextGlobal } from '../Components/utils/ApiContext';
 
 const Home = () => {
   const {dentists}=useContext(ContextGlobal);
-  
+  console.log({dentists});
+
   return (
     <main className="" >
       <h1>Home</h1>

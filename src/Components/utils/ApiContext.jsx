@@ -5,7 +5,6 @@ export const ContextGlobal = createContext(undefined);
 
 export const ContextProvider = ({ children }) => {
   const [dentists, setDentists] = useState([]);
-  // const [dentistsId, setDentistsId] = useState([]);
 
   const getDentists = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -15,7 +14,6 @@ export const ContextProvider = ({ children }) => {
 
   useEffect(() => {
     getDentists();
-    // getDentistsId();
   } , [])
 
 

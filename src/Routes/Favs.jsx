@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Card from "../Components/Card";
 
 
@@ -7,23 +6,26 @@ const Favs = () => {
   const datosLocalStorage = Object.entries(localStorage);
   let newArrayParseado=[]
   datosLocalStorage.map((value)=>{
-    const pablovalue= value[1];
-    const pabloValueJson=JSON.parse(pablovalue);
-    newArrayParseado.push(pabloValueJson);
+    const tranformValue= value[1];
+    const tranformJson=JSON.parse(tranformValue);
+    newArrayParseado.push(tranformJson);
   })
 
 
   return (
-    <>
+    <div className = "card-favorite">
       <h1>Dentists Favs</h1>
       <div className="card-grid">
         {/* {este componente debe consumir los destacados del localStorage}
         { Deberan renderizar una Card por cada uno de ellos} */}
-        {datosLocalStorage.length && newArrayParseado.map((dentist) => (
-        <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id}/>
-        ))}
-      </div>
-    </>
+          {newArrayParseado.length && newArrayParseado.map((dentist) => (
+        <div className="card">
+          <Card key={dentist.id} name={dentist.name} username={dentist.username} id={dentist.id}/>
+        </div>
+          ))}
+        </div>
+
+    </div>
   );
 };
 

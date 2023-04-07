@@ -18,6 +18,9 @@ const Navbar = () => {
         <li className="nav-item">
         <Link className="nav-link active" aria-current="page" to="/contact">Contacto</Link> 
         </li>
+        <li>
+        <button type="button" class="btn btn-dark">Dark</button>
+        </li>
       </ul>
     </div>
   </nav>

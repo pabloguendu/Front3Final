@@ -1,16 +1,20 @@
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html{
+ height: 100%;
+ width: 100%;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  justify-content: space-between;
 }
 .favButton{
   background-color: rgba(136, 136, 136, 0.116);
@@ -47,7 +51,6 @@ footer {
   bottom: 0;
   width: 100%;
   height: 20%;
-  margin-top: 2rem;
 }
 
 footer > img{
@@ -87,7 +90,6 @@ form{
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  width: 90vw;
   flex-wrap: wrap;
 }
 .cardDetails{
@@ -133,11 +135,20 @@ tr:nth-child(even) {
 .dark{
   background-color: #12121296;
   color: white;
+  height: 100%;
+}
+.white{
+  background-color: white;
+  height: 100%;
+  color: black;
 }
 .dark > a {
   color: white;
 }
-.dark > p {
+.dark > p{
+  color: white;
+}
+.bg-dark h3{
   color: white;
 }
 

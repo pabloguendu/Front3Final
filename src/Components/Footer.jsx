@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ContextGlobal } from './utils/ApiContext';
 
 const Footer = () => {
+  const {state}=useContext(ContextGlobal);
   return (
-    <footer className='footer'>
-        <p>Powered by</p>
-        <img src="../.jpg" alt='DH-logo' />
+    <footer className={state.darkMode?'navbar navbar-expand-lg navbar-light bg-light':'navbar navbar-expand-lg navbar-dark bg-dark'}>
+        <h3 className={state.dark?'color:white':'color:black'}>Powered by</h3>
+        <img src="../images/DH.png" alt='DH-logo' />
     </footer>
   )
 }

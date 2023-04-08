@@ -25,7 +25,7 @@ const Navbar = () => {
         <Link className="nav-link active" aria-current="page" to="/contact">Contacto</Link> 
         </li>
         <li>
-        <button onClick={toggleDarkMode} type="button" class={state.darkMode ?'btn btn-light':'btn btn-dark'}>
+        <button onClick={toggleDarkMode} type="button" className={state.darkMode ?'btn btn-light':'btn btn-dark'}>
           {state.darkMode ? 'Light Mode' : 'Dark Mode'}</button>
         </li>
       </ul>

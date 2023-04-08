@@ -6,7 +6,7 @@ const Card = ({ name, email,phone, webSite }) => {
   return (
     <div className="container-details">
     <div className="card cardDetails">
-      <img src="../images/doctor.jpg" class="card-img-top" alt="doctor"/>
+      <img src="../images/doctor.jpg" className="card-img-top" alt="doctor"/>
     <div className="card-body">
       <h5 className="card-title">{name}</h5>
       <p className="card-text">Email: {email}</p>

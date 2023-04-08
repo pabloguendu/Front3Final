@@ -12,7 +12,7 @@ export const ContextProvider = ({ children }) => {
     const data = await res.json();
     setDentists(data)
   };
-  const darkModeReducer = (state, action) => {
+  const reducer = (state, action) => {
     switch (action.type) {
       case 'TOGGLE':
         return { ...state, darkMode: !state.darkMode };
@@ -24,7 +24,7 @@ export const ContextProvider = ({ children }) => {
   useEffect(() => {
     getDentists();
   } , [])
-  const [state, dispatch] = useReducer(darkModeReducer, { darkMode: false });
+  const [state, dispatch] = useReducer(reducer, { darkMode: false });
 
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 

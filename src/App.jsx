@@ -7,13 +7,13 @@ import { ContextProvider } from "./Components/utils/ApiContext";
 
 function App() {
   return (
-      <ContextProvider>
       <div className="App">
+      <ContextProvider>
           <Navbar/>
           <Outlet />
           <Footer/>
-      </div>
       </ContextProvider>
+      </div>
   );
 }
 

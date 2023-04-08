@@ -5,7 +5,7 @@ const Card = ({ name, username, id }) => {
       
   return (
     <div>
-      <img src="../images/doctor.jpg" class="card-img-top" alt="doctor"/>
+      <img src="../images/doctor.jpg" className="card-img-top" alt="doctor"/>
     <div className="card-body">
       <h5 className="card-title">{id} - {name}</h5>
       <p className="card-text">{username}</p>

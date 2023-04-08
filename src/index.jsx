@@ -8,6 +8,7 @@ import Contact from './Routes/Contact'
 import Detail from './Routes/Detail'
 import Favs from './Routes/Favs'
 import 'bootstrap/dist/css/bootstrap.css';
+import Error from './Routes/Error';
 
 
 
@@ -20,6 +21,7 @@ root.render(
           <Route path="contact" element={<Contact />} />
           <Route path="detail/:id" element={<Detail />} />
           <Route path="favs" element={<Favs />} />
+          <Route path="*" element={<Error/>} />
         </Route>
       </Routes>
     </BrowserRouter>
